@@ -5,6 +5,12 @@ createSlice({
     initialState: {
         itmes: [],
         totalQuantity: 0,
-        totalAmount: 0,
+    },
+    reducers: {
+        addItemToCart(state, action) {
+            const item = action.payload;
+            
+        },
+        removeItemFromCart() {},
     }
 })
