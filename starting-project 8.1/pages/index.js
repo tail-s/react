@@ -1,7 +1,9 @@
+import Head from 'next/head';
 import { MongoClient } from 'mongodb';
 
 // import { useEffect, useState } from 'react';
 import MeetupList from '../components/meetups/MeetupList';
+import { Fragment } from 'react';
 
 // const DUMMY_MEETUPS = [
 //     {
@@ -28,7 +30,11 @@ function HomePage(props) {
     // }, [])
 
     return (
-        <MeetupList meetups={props.meetups} />
+        <Fragment>
+            <Head></Head>
+            <MeetupList meetups={props.meetups} />
+        </Fragment>
+        
     );
 };
 
